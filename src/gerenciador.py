@@ -5,10 +5,18 @@ class Gerenciador:
         self.tarefas = []
         self.proximo_id = 1
 
-    def criar_tarefa(self, titulo, descricao, prioridade):
-        tarefa = Tarefa(self.proximo_id, titulo, descricao, prioridade)
+    def criar_tarefa(self, titulo, descricao, prioridade, responsavel):
+        tarefa = Tarefa(
+            self.proximo_id,
+            titulo,
+            descricao,
+            prioridade,
+            responsavel
+        )
+
         self.tarefas.append(tarefa)
         self.proximo_id += 1
+
         return tarefa
 
     def listar_tarefas(self):
