@@ -24,17 +24,19 @@ class Gerenciador:
     def listar_tarefas(self):
         return self.tarefas
 
-    def buscar_tarefa(self, id):
+    def buscar_tarefa(self, id_tarefa):
 
         for tarefa in self.tarefas:
-            if tarefa.id == id:
+
+            if tarefa.id == id_tarefa:
                 return tarefa
 
         return None
 
-    def excluir_tarefa(self, id):
+    def excluir_tarefa(self, id_tarefa):
 
-        tarefa = self.buscar_tarefa(id)
-
-        if tarefa:
-            self.tarefas.remove(tarefa)
+        self.tarefas = [
+            tarefa
+            for tarefa in self.tarefas
+            if tarefa.id != id_tarefa
+        ]
