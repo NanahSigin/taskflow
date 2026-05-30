@@ -550,15 +550,6 @@ frame_concluido.pack(
     expand=True
 )
 
-# BOTÃO STATUS
-
-tk.Button(
-    janela,
-    text="⏩ Avançar",
-    command=avancar_status,
-    bg="#6366F1",
-    fg="white"
-).pack(pady=10)
 
 # START
 
