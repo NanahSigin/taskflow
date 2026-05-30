@@ -34,7 +34,7 @@ BASE_DIR = os.path.dirname(__file__)
 # ==========================
 # BACKGROUND
 # ==========================
-caminho_bg = os.path.join(BASE_DIR, "cats_bg.png")
+caminho_bg = os.path.join(BASE_DIR, "cats_bg.png.jpg")
 
 imagem_bg = Image.open(caminho_bg)
 imagem_bg = imagem_bg.resize((1200, 700))
