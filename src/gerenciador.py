@@ -29,7 +29,6 @@ class Gerenciador:
                 return tarefa
         return None
 
-    # CORRIGIDO
     def excluir_tarefa(self, id_tarefa):
         tarefa = self.buscar_tarefa(id_tarefa)
 
