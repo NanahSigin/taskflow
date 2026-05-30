@@ -1,5 +1,6 @@
 from tarefa import Tarefa
 
+
 class Gerenciador:
     def __init__(self):
         self.tarefas = []
@@ -28,5 +29,9 @@ class Gerenciador:
                 return tarefa
         return None
 
+    # CORRIGIDO
     def excluir_tarefa(self, id_tarefa):
-        self.tarefas = [t for t in self.tarefas if t.id != id_tarefa]
+        tarefa = self.buscar_tarefa(id_tarefa)
+
+        if tarefa:
+            self.tarefas.remove(tarefa)
