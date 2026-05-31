@@ -1,4 +1,4 @@
-from src.tarefa import Tarefa
+from tarefa import Tarefa
 
 
 class Gerenciador:

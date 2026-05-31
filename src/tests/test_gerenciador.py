@@ -1,4 +1,9 @@
-from src.gerenciador import Gerenciador
+import sys
+import os
+
+sys.path.append(os.path.abspath("src"))
+
+from gerenciador import Gerenciador
 
 def test_criar_tarefa():
     g = Gerenciador()
