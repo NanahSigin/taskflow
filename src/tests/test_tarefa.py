@@ -1,8 +1,7 @@
-from gerenciador import Gerenciador
+from src.gerenciador import Gerenciador
 
 def test_criar_tarefa():
     g = Gerenciador()
-    t = g.criar_tarefa("Teste", "Desc", "Alta")
+    t = g.criar_tarefa("Teste", "Desc", "Alta", "Ana")
 
-    assert t.id == 1
     assert t.titulo == "Teste"

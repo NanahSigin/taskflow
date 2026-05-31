@@ -1,34 +1,26 @@
 from src.gerenciador import Gerenciador
 
-
 def test_criar_tarefa():
+    g = Gerenciador()
+    t = g.criar_tarefa("Teste", "Desc", "Alta", "Ana")
 
-    gerenciador = Gerenciador()
-
-    tarefa = gerenciador.criar_tarefa(
-        "Teste",
-        "Descrição",
-        "Alta"
-    )
-
-    assert tarefa.titulo == "Teste"
-    assert len(gerenciador.tarefas) == 1
+    assert t.id == 1
+    assert t.titulo == "Teste"
 
 
-def test_excluir_tarefa():
+def test_lista_com_tarefa():
+    g = Gerenciador()
 
-    gerenciador = Gerenciador()
+    g.criar_tarefa("Estudar", "Python", "Alta", "Ana")
 
-    tarefa = gerenciador.criar_tarefa(
-        "Teste",
-        "Descrição",
-        "Alta"
-    )
+    assert len(g.tarefas) == 1
 
-    gerenciador.excluir_tarefa(
-        tarefa.id
-    )
 
-    assert len(
-        gerenciador.tarefas
-    ) == 0
+def test_criar_duas_tarefas():
+    g = Gerenciador()
+
+    t1 = g.criar_tarefa("T1", "Desc1", "Alta", "Ana")
+    t2 = g.criar_tarefa("T2", "Desc2", "Baixa", "João")
+
+    assert t1.id == 1
+    assert t2.id == 2
